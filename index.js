@@ -1,13 +1,11 @@
-const r = 7
+const r = 7;
+let pi;
 
-if (r % 7 == 0) {
-    const luasLingkaranA = 22 / 7 * r * r
-    console.log(luasLingkaranA)
-    const kelilingLingkaranA = 22 / 7 * r * 2
-    console.log(kelilingLingkaranA)
+if (r % 7 === 0) {
+  pi = 22 / 7;
 } else {
-    const luasLingkaranB = 3.14 / 7 * r * r
-    console.log(luasLingkaranB)
-    const kelilingLingkaranB = 3.14 / 7 * r * 2
-    console.log(kelilingLingkaranB)
+  pi = 3.14;
 }
+
+console.log(pi * r * r);
+console.log(pi * r * 2);
