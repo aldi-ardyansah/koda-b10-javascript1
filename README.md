@@ -7,7 +7,7 @@
     flowchart TD
     A((Start))
     B[/r/]
-    C{r / 7 == 0}
+    C{r % 7 == 0}
     D[22 / 7 * r * r]
     E[3,14 * r * r]
     F[/luasLingkaranA/]
