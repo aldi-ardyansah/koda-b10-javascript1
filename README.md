@@ -10,12 +10,12 @@
     C{r / 7 == 0}
     D[22 / 7 * r * r]
     E[3,14 * r * r]
-    F[/print/]
-    G[/print/]
+    F[/luasLingkaranA/]
+    G[/luasLingkaranB/]
     H[22 / 7 * r * 2]
     I[3,14 * r * 2]
-    J[/print/]
-    K[/print/]
+    J[/kelilingLingkaranA/]
+    K[/kelilingLingkaranB/]
     Z(((Stop)))
 
     A --> B --> C
