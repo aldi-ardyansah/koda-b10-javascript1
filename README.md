@@ -1,31 +1,98 @@
-# JavaScript 1
+# JavaScript 2
 
-## Membuat Program Hitung Luas dan Keliling Lingkaran
+## Membuat Program
 
-### Flowchart
-```mermaid
-    flowchart TD
-    A((Start))
-    B[/r/]
-    C{r / 7 == 0}
-    D[22 / 7 * r * r]
-    E[3,14 * r * r]
-    F[/luasLingkaranA/]
-    G[/luasLingkaranB/]
-    H[22 / 7 * r * 2]
-    I[3,14 * r * 2]
-    J[/kelilingLingkaranA/]
-    K[/kelilingLingkaranB/]
-    Z(((Stop)))
+### Mengakses we.are.the.best
+```
+const we = {
+  are: {
+    the: {
+      best: "Koda"
+    }
+  }
+};
+console.log(we.are.the.best);
+```
 
-    A --> B --> C
-    C --True--> D
-    C --False--> E
-    D --> F
-    E --> G
-    F --> H
-    G --> I
-    H --> J
-    I --> K
-    J --> Z
-    K --> Z
+### Mengakses hello.world
+```
+const hello = {
+  world: "Hello World"
+};
+console.log(hello.world);
+```
+
+### Mengakses obj.str[3][1][2].man[0].tech.academy
+```
+const obj = {
+  str: [
+    null,
+    null,
+    null,
+    [
+      null,
+      [
+        null,
+        null,
+        {
+          man: [
+            {
+              tech: {
+                academy: "Koda Academy"
+              }
+            }
+          ]
+        }
+      ]
+    ]
+  ]
+};
+console.log(obj.str[3][1][2].man[0].tech.academy);
+```
+
+### Mengakses my[0].favourite[3].fruit.is
+```
+const my = [
+  {
+    favourite: [
+      {
+        artist: {
+          is: "Sherina"
+        }
+      },
+      {
+        bike: {
+          is: "Wimcycle"
+        }
+      },
+      {
+        car: {
+          is: "Daihatsu"
+        }
+      },
+      {
+        fruit: {
+          is: "Food"
+        }
+      }
+    ]
+  }
+];
+console.log(my[0].favourite[3].fruit.is);
+```
+
+### Mengakses num.first[1] + num.second[2]
+```
+const num = {
+  first: [
+    1,
+    24
+  ],
+  second: [
+    1,
+    2,
+    8
+  ]
+};
+console.log(num.first[1] + num.second[2]);
+```
