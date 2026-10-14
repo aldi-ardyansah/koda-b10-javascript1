@@ -7,18 +7,20 @@
     flowchart TD
     A((Start))
     B[/r/]
-    C{r % 7 === 0}
-    D[pi = 22 / 7]
-    E[pi = 3.14]
-    F[/pi * r * r/]
-    G[/2 * pi * r/]
+    C[/pi/]
+    D{r % 7 === 0}
+    E[pi = 22 / 7]
+    F[pi = 3.14]
+    G[/pi * r * r/]
+    H[/2 * pi * r/]
     Z(((Stop)))
 
     A --> B --> C
-    C --True--> D
-    C --False--> E
-    D --> F
-    E --> F
+    C --> D
+    D --True--> E
+    D --False--> F
+    E --> G
     F --> G
-    G --> Z
+    G --> H
+    H --> Z
 ```
