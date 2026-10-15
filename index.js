@@ -1,5 +1,6 @@
 const r = 7;
 
+// Pure Function
 function hitungLingkaran(r) {
     let pi;
     if (r % 7 === 0) {
@@ -13,6 +14,7 @@ function hitungLingkaran(r) {
     return {luas, keliling};
 }
 
+// Impure Function
 function tampilkan(result) {
     console.log(result.luas);
     console.log(result.keliling);
