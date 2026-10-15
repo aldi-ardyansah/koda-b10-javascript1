@@ -25,7 +25,7 @@
     H --> Z
 ```
 
-### Penjelasan
+### Penjelasan Kode
 ```
 // Membuat objek hitungLingkaran
 const hitungLingkaran = {
