@@ -27,14 +27,17 @@
 
 ### Penjelasan
 ```
-// Membuat method hitungLingkaran
+/*
+Membuat objek hitungLingkaran
+*/
 const hitungLingkaran = {
   r: 7,
   pi: 0,
+
   /*
   Membuat method tentukanPi dengan pengondisian:
-  - jika r modulus 7 sama dengan 0 maka pi adalah 22/7
-  - jika r modulus 7 tidak sama dengan 0 maka pi adalah 3.14
+  - Jika r habis dibagi 7, pi bernilai 22/7.
+  - Jika tidak, pi bernilai 3.14.
   */
   tentukanPi: function() {
     if (this.r % 7 === 0) {
@@ -43,24 +46,28 @@ const hitungLingkaran = {
       this.pi = 3.14;
     }
   },
-  // Membuat function rumus luas lingkaran dan mengembalikan nilai ke method luasLingkaran
+
+  // Membuat method luasLingkaran untuk menghitung dan mengembalikan luas lingkaran
   luasLingkaran: function() {
     return this.pi * this.r * this.r;
   },
-  // Membuat function rumus keliling lingkaran dan mengembalikan nilai ke method kelilingLingkaran
+
+  // Membuat method kelilingLingkaran untuk menghitung dan mengembalikan keliling lingkaran
   kelilingLingkaran: function() {
     return this.pi * this.r * 2;
   }
 };
 
-// Memanggil method tentukanPi
+// Memanggil method tentukanPi untuk menentukan nilai pi
 hitungLingkaran.tentukanPi();
 
-// Destructuring method ke dalam const
+// Memanggil method luasLingkaran dan menyimpan nilai hasilnya ke const luasLingkaran
 const luasLingkaran = hitungLingkaran.luasLingkaran();
+
+// Memanggil method kelilingLingkaran dan menyimpan nilai hasilnya ke const kelilingLingkaran
 const kelilingLingkaran = hitungLingkaran.kelilingLingkaran();
 
-// Mencetak nilai luasLingkaran dan kelilingLingkaran
+// Menampilkan nilai luas dan keliling lingkaran ke console
 console.log(luasLingkaran);
 console.log(kelilingLingkaran);
 ```
