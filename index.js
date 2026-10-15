@@ -1,26 +1,25 @@
-const r = 7;
-
-// Pure Function
-function hitungLingkaran(r) {
-  let pi;
-  if (r % 7 === 0) {
-    pi = 22/7;
-  } else {
-    pi = 3.14;
+const hitungLingkaran = {
+  r: 7,
+  pi: 0,
+  tentukanPi: function() {
+    if (this.r % 7 === 0) {
+      this.pi = 22 / 7;
+    } else {
+      this.pi = 3.14;
+    }
+  },
+  luasLingkaran: function() {
+    return this.pi * this.r * this.r;
+  },
+  kelilingLingkaran: function() {
+    return this.pi * this.r * 2;
   }
-  const luas = pi * r * r;
-  const keliling = pi * (r * 2);
+};
 
-  return {luas, keliling};
-}
+hitungLingkaran.tentukanPi();
 
-// Destructure
-const {luas, keliling} = hitungLingkaran(r);
+const luasLingkaran = hitungLingkaran.luasLingkaran();
+const kelilingLingkaran = hitungLingkaran.kelilingLingkaran();
 
-// Impure Function
-function tampilkan() {
-  console.log(luas);
-  console.log(keliling);
-}
-
-tampilkan();
+console.log(luasLingkaran);
+console.log(kelilingLingkaran);
