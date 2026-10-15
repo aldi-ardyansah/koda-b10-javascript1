@@ -29,39 +29,52 @@
 ```
 // Membuat objek hitungLingkaran
 const hitungLingkaran = {
+  // Menentukan jari-jari lingkaran
   r: 7,
+
+  // Menentukan nilai awal pi
   pi: 0,
-  //Membuat method hitung untuk menghitung luas dan keliling lingkaran.
-  hitung: function() {
-    let pi;
-    /*
-    Menentukan nilai pi menggunakan pengondisian:
-    - Jika r habis dibagi 7, pi bernilai 22/7.
-    - Jika tidak, pi bernilai 3.14.
-    */
+
+  // Membuat method untuk menentukan nilai pi
+  tentukanPi: function() {
+    // Memeriksa apakah jari-jari habis dibagi 7
     if (this.r % 7 === 0) {
-      pi = 22 / 7;
+      // Jika benar, pi menggunakan 22/7
+      this.pi = 22 / 7;
     } else {
-      pi = 3.14;
+      // Jika salah, pi menggunakan 3.14
+      this.pi = 3.14;
     }
-    
-    // Menghitung luas lingkaran menggunakan rumus pi * r * r
-    const luasLingkaran = pi * this.r * this.r;
+  },
 
-    // Menghitung keliling lingkaran menggunakan rumus pi * r * 2
-    const kelilingLingkaran = pi * this.r * 2;
+  // Membuat method untuk menghitung luas lingkaran
+  luasLingkaran: function() {
+    // Memanggil method tentukanPi untuk menentukan nilai pi
+    hitungLingkaran.tentukanPi();
 
-    // Mengembalikan hasil luas dan keliling dalam bentuk objek
-    return { luasLingkaran, kelilingLingkaran };
+    // Menghitung luas dengan rumus pi * r * r
+    return this.pi * this.r * this.r;
+  },
+
+  // Membuat method untuk menghitung keliling lingkaran
+  kelilingLingkaran: function() {
+    // Memanggil method tentukanPi untuk menentukan nilai pi
+    hitungLingkaran.tentukanPi();
+
+    // Menghitung keliling dengan rumus pi * r * 2
+    return this.pi * this.r * 2;
   }
 };
 
-// Memanggil method hitung dan menyimpan hasilnya ke variabel result
-const result = hitungLingkaran.hitung();
+// Memanggil method luasLingkaran dan menyimpan hasilnya
+const luasLingkaran = hitungLingkaran.luasLingkaran();
+
+// Memanggil method kelilingLingkaran dan menyimpan hasilnya
+const kelilingLingkaran = hitungLingkaran.kelilingLingkaran();
 
 // Menampilkan hasil luas lingkaran ke console
-console.log(result.luasLingkaran);
+console.log(luasLingkaran);
 
 // Menampilkan hasil keliling lingkaran ke console
-console.log(result.kelilingLingkaran);
+console.log(kelilingLingkaran);
 ```

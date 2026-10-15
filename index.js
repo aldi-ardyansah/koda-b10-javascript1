@@ -1,20 +1,25 @@
 const hitungLingkaran = {
   r: 7,
   pi: 0,
-  hitung: function() {
-    let pi;
+  tentukanPi: function() {
     if (this.r % 7 === 0) {
-      pi = 22 / 7;
+      this.pi = 22 / 7;
     } else {
-      pi = 3.14;
+      this.pi = 3.14;
     }
-    const luasLingkaran = pi * this.r * this.r;
-    const kelilingLingkaran = pi * this.r * 2;
-    return {luasLingkaran, kelilingLingkaran};
+  },
+  luasLingkaran: function() {
+    hitungLingkaran.tentukanPi();
+    return this.pi * this.r * this.r;
+  },
+  kelilingLingkaran: function() {
+    hitungLingkaran.tentukanPi();
+    return this.pi * this.r * 2;
   }
 };
 
-const result = hitungLingkaran.hitung();
+const luasLingkaran = hitungLingkaran.luasLingkaran();
+const kelilingLingkaran = hitungLingkaran.kelilingLingkaran();
 
-console.log(result.luasLingkaran);
-console.log(result.kelilingLingkaran);
+console.log(luasLingkaran);
+console.log(kelilingLingkaran);
