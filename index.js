@@ -4,9 +4,9 @@ const r = 7;
 function hitungLingkaran(r) {
   let pi;
   if (r % 7 === 0) {
-    pi = 22/7
+    pi = 22/7;
   } else {
-    pi = 3.14
+    pi = 3.14;
   }
   const luas = pi * r * r;
   const keliling = pi * (r * 2);
@@ -14,12 +14,13 @@ function hitungLingkaran(r) {
   return {luas, keliling};
 }
 
-const result = hitungLingkaran(r);
+// Destructure
+const {luas, keliling} = hitungLingkaran(r);
 
 // Impure Function
 function tampilkan() {
-  console.log(result.luas);
-  console.log(result.keliling);
+  console.log(luas);
+  console.log(keliling);
 }
 
 tampilkan();
