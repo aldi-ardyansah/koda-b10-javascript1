@@ -27,42 +27,42 @@
 
 ### Penjelasan Kode
 ```
-// Membuat objek hitungLingkaran
-const hitungLingkaran = {
-  r: 7, // Menentukan jari-jari lingkaran
-  pi: 0, // Inisialisasi nilai pi
-
-  // Menentukan nilai pi menggunakan if...else
-  tentukanPi: function() {
-    if (this.r % 7 === 0) {
-      this.pi = 22 / 7;
-    } else {
-      this.pi = 3.14;
-    }
-  },
-
-  // Menghitung luas dan mengirim hasilnya ke callback
-  luasLingkaran: function(callback) {
-    hitungLingkaran.tentukanPi();
-    const luas = this.pi * this.r * this.r;
-    callback(luas); // Memanggil callback dengan hasil luas
-  },
-
-  // Menghitung keliling dan mengirim hasilnya ke callback
-  kelilingLingkaran: function(callback) {
-    hitungLingkaran.tentukanPi();
-    const keliling = this.pi * this.r * 2;
-    callback(keliling); // Memanggil callback dengan hasil keliling
-  }
+// Membuat objek lingkaran untuk menyimpan jari-jari dan nilai pi
+const lingkaran = {
+  r: 7,
+  pi: 0
 };
 
-// Memanggil method luasLingkaran dengan callback untuk mencetak hasil
-hitungLingkaran.luasLingkaran(function(luasLingkaran) {
-  console.log(luasLingkaran);
+// Menentukan nilai pi berdasarkan jari-jari menggunakan if...else
+function menentukanPi() {
+  if (lingkaran.r % 7 === 0) {
+    lingkaran.pi = 22 / 7;
+  } else {
+    lingkaran.pi = 3.14;
+  }
+}
+
+// Menghitung luas lingkaran dan mengirim hasilnya melalui callback
+function luasLingkaran(callback) {
+  menentukanPi();
+  const luas = lingkaran.pi * lingkaran.r * lingkaran.r;
+  callback(luas);
+}
+
+// Menghitung keliling lingkaran dan mengirim hasilnya melalui callback
+function kelilingLingkaran(callback) {
+  menentukanPi();
+  const keliling = lingkaran.pi * lingkaran.r * 2;
+  callback(keliling);
+}
+
+// Memanggil fungsi luasLingkaran dengan callback untuk menampilkan hasil
+luasLingkaran(function(luas) {
+  console.log(luas);
 });
 
-// Memanggil method kelilingLingkaran dengan callback untuk mencetak hasil
-hitungLingkaran.kelilingLingkaran(function(kelilingLingkaran) {
-  console.log(kelilingLingkaran);
+// Memanggil fungsi kelilingLingkaran dengan callback untuk menampilkan hasil
+kelilingLingkaran(function(keliling) {
+  console.log(keliling);
 });
 ```

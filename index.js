@@ -1,29 +1,32 @@
-const hitungLingkaran = {
+const lingkaran = {
   r: 7,
-  pi: 0,
-  tentukanPi: function() {
-    if (this.r % 7 === 0) {
-      this.pi = 22 / 7;
-    } else {
-      this.pi = 3.14;
-    }
-  },
-  luasLingkaran: function(callback) {
-    hitungLingkaran.tentukanPi();
-    const luas = this.pi * this.r * this.r;
-    callback(luas);
-  },
-  kelilingLingkaran: function(callback) {
-    hitungLingkaran.tentukanPi();
-    const keliling = this.pi * this.r * 2;
-    callback(keliling);
-  }
+  pi: 0
 };
 
-hitungLingkaran.luasLingkaran(function(luasLingkaran) {
-  console.log(luasLingkaran);
+function menentukanPi() {
+  if (lingkaran.r % 7 === 0) {
+    lingkaran.pi = 22 / 7;
+  } else {
+    lingkaran.pi = 3.14;
+  }
+}
+
+function luasLingkaran(callback) {
+  menentukanPi();
+  const luas = lingkaran.pi * lingkaran.r * lingkaran.r;
+  callback(luas);
+}
+
+function kelilingLingkaran(callback) {
+  menentukanPi();
+  const keliling = lingkaran.pi * lingkaran.r * 2;
+  callback(keliling);
+}
+
+luasLingkaran(function(luas) {
+  console.log(luas);
 });
 
-hitungLingkaran.kelilingLingkaran(function(kelilingLingkaran) {
-  console.log(kelilingLingkaran);
+kelilingLingkaran(function(keliling) {
+  console.log(keliling);
 });
