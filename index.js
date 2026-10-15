@@ -8,18 +8,22 @@ const hitungLingkaran = {
       this.pi = 3.14;
     }
   },
-  luasLingkaran: function() {
+  luasLingkaran: function(callback) {
     hitungLingkaran.tentukanPi();
-    return this.pi * this.r * this.r;
+    const luas = this.pi * this.r * this.r;
+    callback(luas);
   },
-  kelilingLingkaran: function() {
+  kelilingLingkaran: function(callback) {
     hitungLingkaran.tentukanPi();
-    return this.pi * this.r * 2;
+    const keliling = this.pi * this.r * 2;
+    callback(keliling);
   }
 };
 
-const luasLingkaran = hitungLingkaran.luasLingkaran();
-const kelilingLingkaran = hitungLingkaran.kelilingLingkaran();
+hitungLingkaran.luasLingkaran(function(luasLingkaran) {
+  console.log(luasLingkaran);
+});
 
-console.log(luasLingkaran);
-console.log(kelilingLingkaran);
+hitungLingkaran.kelilingLingkaran(function(kelilingLingkaran) {
+  console.log(kelilingLingkaran);
+});
