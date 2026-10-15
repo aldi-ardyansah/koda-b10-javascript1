@@ -1,4 +1,5 @@
 const r = 7;
+const result = hitungLingkaran(r);
 
 // Pure Function
 function hitungLingkaran(r) {
@@ -13,8 +14,6 @@ function hitungLingkaran(r) {
 
   return {luas, keliling};
 }
-
-const result = hitungLingkaran(r);
 
 // Impure Function
 function tampilkan() {
