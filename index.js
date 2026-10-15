@@ -14,11 +14,12 @@ function hitungLingkaran(r) {
     return {luas, keliling};
 }
 
+const result = hitungLingkaran(r);
+
 // Impure Function
-function tampilkan(result) {
-    console.log(result.luas);
-    console.log(result.keliling);
+function tampilkan() {
+  console.log(result.luas);
+  console.log(result.keliling);
 }
 
-const result = hitungLingkaran(r);
-tampilkan(result);
+tampilkan();
