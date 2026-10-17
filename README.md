@@ -26,7 +26,7 @@
 ```
 
 ### Penjelasan Kode
-```
+```javascript
 // Membuat objek lingkaran untuk menyimpan jari-jari dan nilai pi
 const lingkaran = {
   r: 7,
